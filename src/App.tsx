@@ -1145,9 +1145,12 @@ export default function App() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center z-10">
-                  <img src="https://6framestudio.com/6frame_logo_white.svg" alt="6FRAME Logo" className="w-4/5 h-auto max-w-full blur-[0.3px]" style={{ imageRendering: "-webkit-optimize-contrast" }} />
-                </div>
+                {view !== "work" && view !== "home" && view !== "contact" && view !== "team" && view !== "capabilities" &&
+                 view !== "anonymous-detail" && view !== "majid-detail" && view !== "jim-detail" && (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <img src="https://6framestudio.com/6frame_logo_white.svg" alt="6FRAME Logo" className="w-4/5 h-auto max-w-full blur-[0.3px]" style={{ imageRendering: "-webkit-optimize-contrast" }} />
+                  </div>
+                )}
               </div>
             </div>
           </div>
